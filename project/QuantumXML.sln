@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3BA4C465-B646-45A2-83A1-F59F06155973}"
+	ProjectSection(SolutionItems) = preProject
+		..\Doxyfile = ..\Doxyfile
+		..\NOTES.txt = ..\NOTES.txt
+		..\Productions.txt = ..\Productions.txt
+		..\README.txt = ..\README.txt
+		..\TODO.txt = ..\TODO.txt
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QuantumXML", "QuantumXML.vcxproj", "{5AA5BF77-D91A-4418-8F15-120FE90ED0D3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XMLTest", "XMLTest.vcxproj", "{0628ECE2-8A67-4188-A3B9-159C2ADB37DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5AA5BF77-D91A-4418-8F15-120FE90ED0D3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5AA5BF77-D91A-4418-8F15-120FE90ED0D3}.Debug|Win32.Build.0 = Debug|Win32
+		{5AA5BF77-D91A-4418-8F15-120FE90ED0D3}.Release|Win32.ActiveCfg = Release|Win32
+		{5AA5BF77-D91A-4418-8F15-120FE90ED0D3}.Release|Win32.Build.0 = Release|Win32
+		{0628ECE2-8A67-4188-A3B9-159C2ADB37DF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0628ECE2-8A67-4188-A3B9-159C2ADB37DF}.Debug|Win32.Build.0 = Debug|Win32
+		{0628ECE2-8A67-4188-A3B9-159C2ADB37DF}.Release|Win32.ActiveCfg = Release|Win32
+		{0628ECE2-8A67-4188-A3B9-159C2ADB37DF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
