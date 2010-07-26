@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5AA5BF77-D91A-4418-8F15-120FE90ED0D3}</ProjectGuid>
+    <RootNamespace>QuantumXML</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\build\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\build\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\build\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\build\$(ProjectName)\$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>Z:\code\vendor\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;QUANTUMXML_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>Z:\code\vendor\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;QUANTUMXML_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Exception.cxx" />
+    <ClCompile Include="..\src\FSMParser.cxx" />
+    <ClCompile Include="..\src\getopts.cxx" />
+    <ClCompile Include="..\src\Parser.cxx" />
+    <ClCompile Include="..\src\Stream.cxx" />
+    <ClCompile Include="..\src\URL.cxx" />
+    <ClCompile Include="..\src\Validator.cxx" />
+    <ClCompile Include="..\src\tree\AttDef.cxx" />
+    <ClCompile Include="..\src\tree\AttList.cxx" />
+    <ClCompile Include="..\src\tree\Attribute.cxx" />
+    <ClCompile Include="..\src\tree\CDSect.cxx" />
+    <ClCompile Include="..\src\tree\CharData.cxx" />
+    <ClCompile Include="..\src\tree\Comment.cxx" />
+    <ClCompile Include="..\src\tree\Doctype.cxx" />
+    <ClCompile Include="..\src\tree\Document.cxx" />
+    <ClCompile Include="..\src\tree\Element.cxx" />
+    <ClCompile Include="..\src\tree\ElementDecl.cxx" />
+    <ClCompile Include="..\src\tree\Entity.cxx" />
+    <ClCompile Include="..\src\tree\ExternalID.cxx" />
+    <ClCompile Include="..\src\tree\Misc.cxx" />
+    <ClCompile Include="..\src\tree\Node.cxx" />
+    <ClCompile Include="..\src\tree\Notation.cxx" />
+    <ClCompile Include="..\src\tree\ProcessingInstruction.cxx" />
+    <ClCompile Include="..\src\tree\Reference.cxx" />
+    <ClCompile Include="..\src\fsm\StateBase.cxx" />
+    <ClCompile Include="..\src\fsm\StateMachine.cxx" />
+    <ClCompile Include="..\src\states\AttlistDecl.cxx" />
+    <ClCompile Include="..\src\states\Attribute.cxx">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)fsm_Attribute.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)fsm_Attribute.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\states\CDSect.cxx">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)fsm_CDSect.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)fsm_CDSect.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\states\Comment.cxx">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)fsm_Comment.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)fsm_Comment.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\states\DoctypeDecl.cxx" />
+    <ClCompile Include="..\src\states\Document.cxx">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)fsm_Document.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)fsm_Document.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\states\Element.cxx">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)fsm_Element.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)fsm_Element.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\states\ElementDecl.cxx">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)fsm_ElementDecl.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)fsm_ElementDecl.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\states\EntityDecl.cxx" />
+    <ClCompile Include="..\src\states\Misc.cxx">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)fsm_Misc.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)fsm_Misc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\states\NotationDecl.cxx" />
+    <ClCompile Include="..\src\states\ProcessingInstruction.cxx">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)fsm_PI.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)fsm_PI.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\states\XMLDecl.cxx" />
+    <ClCompile Include="..\src\DOM\Attr.cxx" />
+    <ClCompile Include="..\src\DOM\CDATASection.cxx" />
+    <ClCompile Include="..\src\DOM\CharacterData.cxx" />
+    <ClCompile Include="..\src\DOM\Comment.cxx">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)DOM_Comment.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)DOM_Comment.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\DOM\Document.cxx">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)DOM_Document.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)DOM_Document.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\DOM\DocumentFragment.cxx" />
+    <ClCompile Include="..\src\DOM\DocumentType.cxx" />
+    <ClCompile Include="..\src\DOM\DOMException.cxx" />
+    <ClCompile Include="..\src\DOM\DOMImplementation.cxx" />
+    <ClCompile Include="..\src\DOM\DOMString.cxx" />
+    <ClCompile Include="..\src\DOM\Element.cxx">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)DOM_Element.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)DOM_Element.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\DOM\Entity.cxx">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)DOM_Entity.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)DOM_Entity.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\DOM\EntityReference.cxx" />
+    <ClCompile Include="..\src\DOM\NamedNodeMap.cxx" />
+    <ClCompile Include="..\src\DOM\Node.cxx">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)DOM_Node.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)DOM_Node.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\DOM\NodeList.cxx" />
+    <ClCompile Include="..\src\DOM\Notation.cxx">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)DOM_Notation.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)DOM_Notation.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\DOM\ProcessingInstruction.cxx">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)DOM_PI.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)DOM_PI.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\DOM\Text.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\Exception.h" />
+    <ClInclude Include="..\src\FSMParser.h" />
+    <ClInclude Include="..\src\getopts.h" />
+    <ClInclude Include="..\src\Parser.h" />
+    <ClInclude Include="..\src\Stream.h" />
+    <ClInclude Include="..\src\Tree.h" />
+    <ClInclude Include="..\src\URL.h" />
+    <ClInclude Include="..\src\Validator.h" />
+    <ClInclude Include="..\src\XMLString.h" />
+    <ClInclude Include="..\src\tree\AttDef.h" />
+    <ClInclude Include="..\src\tree\AttList.h" />
+    <ClInclude Include="..\src\tree\Attribute.h" />
+    <ClInclude Include="..\src\tree\CDSect.h" />
+    <ClInclude Include="..\src\tree\CharData.h" />
+    <ClInclude Include="..\src\tree\Comment.h" />
+    <ClInclude Include="..\src\tree\Doctype.h" />
+    <ClInclude Include="..\src\tree\Document.h" />
+    <ClInclude Include="..\src\tree\Element.h" />
+    <ClInclude Include="..\src\tree\ElementDecl.h" />
+    <ClInclude Include="..\src\tree\Entity.h" />
+    <ClInclude Include="..\src\tree\ExternalID.h" />
+    <ClInclude Include="..\src\tree\Misc.h" />
+    <ClInclude Include="..\src\tree\Node.h" />
+    <ClInclude Include="..\src\tree\Notation.h" />
+    <ClInclude Include="..\src\tree\ProcessingInstruction.h" />
+    <ClInclude Include="..\src\tree\Reference.h" />
+    <ClInclude Include="..\src\fsm\Functor.h" />
+    <ClInclude Include="..\src\fsm\MultiState.h" />
+    <ClInclude Include="..\src\fsm\State.h" />
+    <ClInclude Include="..\src\fsm\StateBase.h" />
+    <ClInclude Include="..\src\fsm\StateMachine.h" />
+    <ClInclude Include="..\src\states\AttlistDecl.h" />
+    <ClInclude Include="..\src\states\Attribute.h" />
+    <ClInclude Include="..\src\states\CDSect.h" />
+    <ClInclude Include="..\src\states\Comment.h" />
+    <ClInclude Include="..\src\states\DoctypeDecl.h" />
+    <ClInclude Include="..\src\states\Document.h" />
+    <ClInclude Include="..\src\states\Element.h" />
+    <ClInclude Include="..\src\states\ElementDecl.h" />
+    <ClInclude Include="..\src\states\EntityDecl.h" />
+    <ClInclude Include="..\src\states\Misc.h" />
+    <ClInclude Include="..\src\states\NotationDecl.h" />
+    <ClInclude Include="..\src\states\ProcessingInstruction.h" />
+    <ClInclude Include="..\src\states\XMLDecl.h" />
+    <ClInclude Include="..\src\DOM\Attr.h" />
+    <ClInclude Include="..\src\DOM\CDATASection.h" />
+    <ClInclude Include="..\src\DOM\CharacterData.h" />
+    <ClInclude Include="..\src\DOM\Comment.h" />
+    <ClInclude Include="..\src\DOM\Document.h" />
+    <ClInclude Include="..\src\DOM\DocumentFragment.h" />
+    <ClInclude Include="..\src\DOM\DocumentType.h" />
+    <ClInclude Include="..\src\DOM\DOMException.h" />
+    <ClInclude Include="..\src\DOM\DOMImplementation.h" />
+    <ClInclude Include="..\src\DOM\DOMString.h" />
+    <ClInclude Include="..\src\DOM\Element.h" />
+    <ClInclude Include="..\src\DOM\Entity.h" />
+    <ClInclude Include="..\src\DOM\EntityReference.h" />
+    <ClInclude Include="..\src\DOM\NamedNodeMap.h" />
+    <ClInclude Include="..\src\DOM\Node.h" />
+    <ClInclude Include="..\src\DOM\NodeList.h" />
+    <ClInclude Include="..\src\DOM\Notation.h" />
+    <ClInclude Include="..\src\DOM\ProcessingInstruction.h" />
+    <ClInclude Include="..\src\DOM\Text.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
