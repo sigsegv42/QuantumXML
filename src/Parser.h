@@ -31,6 +31,7 @@ namespace XML
 			 * Default Constructor
 			 **/
 			Parser();
+
 			/**
 			 * Default Destructor
 			 **/
@@ -43,17 +44,20 @@ namespace XML
 			 * @return whether the parser was successfully initialized. 
 			 **/
 			bool initialize();
+
 			/**
 			 * Specify whether XML parsing exceptions print output. The default setting is to 
 			 * display exception messages.
 			 * @param quiet_output whether exceptions should be printed or not
 			 */
 			void quiet(bool quiet_output);
+
 			/**
 			 * Enable or disable document Well-Formedness Constraint checks by the parser.
 			 * @param wfc_state whether the parsed document should be checked for wfc errors.
 			 **/
 			void enableWFC(bool wfc_state);
+
 			/**
 			 * Get parser WFC checking state.
 			 * @return whether or not documents will be checked for WFC errors when they are parsed.
@@ -65,6 +69,7 @@ namespace XML
 			 * @param validation_state whether the parsed document should be validated or not.
 			 **/
 			void enableValidation(bool validation_state);
+
 			/**
 			 * Get parser validation setting.
 			 * @return whether or not documents will be validated when they are parsed.
@@ -75,7 +80,9 @@ namespace XML
 			 * Set the URI of the document to be parsed.
 			 * @param url a URI formatted string describing the location of the document to be parsed.
 			 **/
+
 			void uri(const std::string & url);
+
 			/**
 			 * Get the URI of the document to be parsed.
 			 * @return a URI formatted string describing the location of the document to be parsed.
@@ -129,7 +136,7 @@ namespace XML
 
 		private:
 
-			typedef enum ParserFlag
+			enum ParserFlag
 			{
 				// internal parser states
 				StateUninitialized	= (1<<1),

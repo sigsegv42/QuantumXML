@@ -17,7 +17,7 @@ namespace XML
 			Document();
 			~Document();
 
-			typedef enum Flags
+			enum Flags
 			{
 				// about the parsed document
 				NoXMLDecl			= (1<<1), 

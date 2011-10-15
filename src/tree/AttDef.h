@@ -35,7 +35,7 @@ namespace XML
 			AttDef(const std::wstring & name);
 
 			void type(AttType t);
-			void default(DefaultType d);
+			void defaultType(DefaultType d);
 			void enumeration(const std::wstring & name); 
 			void value(const std::wstring & val);
 

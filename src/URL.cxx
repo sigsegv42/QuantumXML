@@ -1,6 +1,8 @@
 #include "URL.h"
 
 #include <ctype.h>
+// for atoi
+#include <stdlib.h>
 
 using namespace XML;
 

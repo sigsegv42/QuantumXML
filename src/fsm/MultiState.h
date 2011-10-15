@@ -35,8 +35,8 @@ namespace FSM
 			 **/
 			virtual bool run(void)
 			{
-				std::string name = _fsm->activeStateName();
-				value_type::iterator iter = _vtable.find(name);
+				std::string name = this->_fsm->activeStateName();
+				typename value_type::iterator iter = _vtable.find(name);
 				if (iter != _vtable.end())
 					return _vtable[name].exec();
 
@@ -54,7 +54,7 @@ namespace FSM
 			void addState(const std::string & name, functor_type func)
 			{
 				_vtable[name] = func;
-				_fsm->addState(name, this);
+				this->_fsm->addState(name, this);
 			}
 
 		private:

@@ -12,7 +12,7 @@ namespace DOM
 
 	class Attr : public Node
 	{
-		friend Element;
+		friend class Element;
 		friend class Document;
 
 		public:

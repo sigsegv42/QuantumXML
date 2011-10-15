@@ -11,7 +11,7 @@ void AttDef::type(AttType t)
 	_type = t;
 }
 
-void AttDef::default(DefaultType d)
+void AttDef::defaultType(DefaultType d)
 {
 	_default = d;
 }
