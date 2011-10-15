@@ -1,0 +1,2 @@
+This is an XML parsing library written in C++ which uses a Finite State Machine in order to do the parsing.
+

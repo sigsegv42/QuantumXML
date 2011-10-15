@@ -1,0 +1,10 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: QuantumXML
+Description: XML parsing library.
+Version: @PACKAGE_VERSION@
+Libs: -L${libdir} -lQuantumXML-1.0
+Cflags: -I${includedir}/QuantumXML-1.0 -I${libdir}/QuantumXML-1.0/include

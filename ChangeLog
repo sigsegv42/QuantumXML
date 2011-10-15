@@ -1,0 +1,4 @@
+10.15.11
+
+- autotool files
+- compiler fixes against gcc 4.5.3
