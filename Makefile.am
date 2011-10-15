@@ -65,7 +65,6 @@ src/tree/Reference.cxx
 libQuantumXML_@QUANTUMXML_API_VERSION@_la_LDFLAGS = -version-info $(QUANTUMXML_SO_VERSION)
 
 library_includedir=$(includedir)/QuantumXML-$(QUANTUMXML_API_VERSION)/QuantumXML
-
 library_include_HEADERS= \
 src/Exception.h \
 src/FSMParser.h \
@@ -74,7 +73,10 @@ src/Stream.h \
 src/Tree.h \
 src/URL.h \
 src/Validator.h \
-src/XMLString.h \
+src/XMLString.h
+
+domlibrary_includedir=$(includedir)/QuantumXML-$(QUANTUMXML_API_VERSION)/QuantumXML/DOM
+domlibrary_include_HEADERS= \
 src/DOM/Attr.h \
 src/DOM/CDATASection.h \
 src/DOM/CharacterData.h \
@@ -93,12 +95,18 @@ src/DOM/Node.h \
 src/DOM/NodeList.h \
 src/DOM/Notation.h \
 src/DOM/ProcessingInstruction.h \
-src/DOM/Text.h \
+src/DOM/Text.h
+
+fsmlibrary_includedir=$(includedir)/QuantumXML-$(QUANTUMXML_API_VERSION)/QuantumXML/fsm
+fsmlibrary_include_HEADERS= \
 src/fsm/Functor.h \
 src/fsm/MultiState.h \
 src/fsm/State.h \
 src/fsm/StateBase.h \
-src/fsm/StateMachine.h \
+src/fsm/StateMachine.h
+
+stateslibrary_includedir=$(includedir)/QuantumXML-$(QUANTUMXML_API_VERSION)/QuantumXML/states
+stateslibrary_include_HEADERS= \
 src/states/AttlistDecl.h \
 src/states/Attribute.h \
 src/states/CDSect.h \
@@ -111,7 +119,10 @@ src/states/EntityDecl.h \
 src/states/Misc.h \
 src/states/NotationDecl.h \
 src/states/ProcessingInstruction.h \
-src/states/XMLDecl.h \
+src/states/XMLDecl.h
+
+treelibrary_includedir=$(includedir)/QuantumXML-$(QUANTUMXML_API_VERSION)/QuantumXML/tree
+treelibrary_include_HEADERS= \
 src/tree/AttDef.h \
 src/tree/AttList.h \
 src/tree/Attribute.h \
@@ -129,7 +140,6 @@ src/tree/Node.h \
 src/tree/Notation.h \
 src/tree/ProcessingInstruction.h \
 src/tree/Reference.h
-
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = QuantumXML-1.0.pc
