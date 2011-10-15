@@ -103,19 +103,19 @@ bool AttlistDecl::DefaultDecl(XML::AttDef & def)
 	if (!_fsm->stream()->compare(L"#REQUIRED", 9))
 	{
 		_fsm->stream()->skipChars(9);
-		def.default(AttDef::Required);
+		def.defaultType(AttDef::Required);
 		return true;
 	}
 	if (!_fsm->stream()->compare(L"#IMPLIED", 8))
 	{
 		_fsm->stream()->skipChars(9);
-		def.default(AttDef::Implied);
+		def.defaultType(AttDef::Implied);
 		return true;
 	}
 	if (!_fsm->stream()->compare(L"#FIXED", 6))
 	{
 		_fsm->stream()->skipChars(6);
-		def.default(AttDef::Fixed);
+		def.defaultType(AttDef::Fixed);
 		if (!_fsm->stream()->isBlank())
 		{
 			Exception e(Exception::NoWhitespace);
@@ -129,7 +129,7 @@ bool AttlistDecl::DefaultDecl(XML::AttDef & def)
 	}
 	else
 	{
-		def.default(AttDef::Value);
+		def.defaultType(AttDef::Value);
 		// get AttValue
 		return true;
 	}
